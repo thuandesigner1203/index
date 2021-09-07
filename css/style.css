@@ -1,0 +1,618 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    cursor: none;
+    background: rgb(27, 27, 27);
+    overflow: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@font-face
+{
+	font-family: 'font1';
+	src: url("../fonts/FilsonProRegular.otf");
+}
+@font-face
+{
+	font-family: 'font2';
+	src: url("../fonts/FilsonProBlack.otf");
+}
+.container
+{
+  width: 100%;
+  height: 4320px;
+  overflow-y: scroll;
+  
+}
+.background
+{
+  font-family: 'font1';
+  position: relative;
+  width: 100%;
+  height: 1080px;
+  color : white;
+  
+}
+.background-portfolio
+{
+  font-family: 'font1';
+  width: 100%;
+  height: 1080px;
+  color : white;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.logo
+{
+ width: 5%;
+ position: absolute;
+ top: 22px;
+ left: 250px;
+}
+.cursor 
+{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand
+{
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+
+p
+{
+  color: white;
+  font-family: 'font1';
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.4em;
+}
+  a
+  {
+    color: teal;
+  }
+.menu2
+{
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    font-family: 'font1';
+    width: 500px;
+    height: 50px;
+    background: rgb(27, 27, 27);
+    border: 1px solid white;
+    border-radius: 4pt;
+    box-sizing: border-box;
+    position: fixed;
+}
+.menu2 ul li
+{
+    font-family: 'font2';
+    float: left;
+    color: white;
+    text-align: center;
+    list-style: none;
+    font-size: 12pt;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    cursor: none;
+}
+.image 
+{
+  position: relative;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 190px;
+}
+.hack-image 
+{
+  display: block;
+  width: 400px;
+  height: 490px;
+  border-radius: 4pt;
+
+}
+
+.overlay 
+{
+  position: absolute;
+  bottom: 295px;
+  left: 53px;
+  right: 0;
+  background-color: white;
+  border-radius: 4pt;
+  overflow: hidden;
+  width: 400px;
+  height: 490px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  opacity: 90%;
+}
+.image:hover .overlay 
+{
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.text-img 
+{
+  color: #111;
+  font-family: 'font2';
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+img > .logo
+{
+   width: 100%;
+   border-radius: 4pt;
+}
+.writting
+{   
+    position: absolute;
+    top: 3500px;
+    width: 1400px;
+    height: 540px;
+    font-family: 'font1';
+    -moz-column-count: 4;
+    -moz-column-gap: 50px;
+    -webkit-column-count: 4;
+    -webkit-column-gap: 50px;
+    column-count: 4;
+    column-gap: 50px;
+}
+.mail-box
+{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    border-radius: 4pt;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    font-size : 16pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: .3s ease-in-out;
+	transition: all .3s ease-in-out;
+    opacity: 25%;
+}
+.mail-box:hover
+{
+    transform: scale(1.3);
+    cursor: none;
+     opacity: 100%;
+     background-color: #444;
+}
+.mailbox-box-main
+{
+    position: fixed;
+    width: 390px;
+    height: 50px;
+    border-radius: 4pt;
+    background-color: white;
+    left: 100px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    color : #111;
+}
+input[type="text"] 
+{
+      width: 310px;
+      box-sizing: border-box;
+      background-color: #111;
+      color: white;
+      border: 1px solid #111;
+      border-radius: 4pt;
+      outline: none;
+      padding: 12px 14px;
+      margin-left: 5px;
+       transition: width 0.3s ease-in-out;
+}
+.mail-box-send
+{
+    width: 60px;
+    height: 40px;
+    position: fixed;
+    left: 425px;
+    bottom: 35px;
+    border-radius: 4pt;
+    background: rgb(27, 27, 27);
+    color: white;
+    font-size : 16pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+.mail-box-send:hover
+{
+    transform: scale(1.3);
+    cursor: none;
+}
+#backtop-btn
+{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    border-radius: 4pt;
+    border: none;
+    background: rgb(27, 27, 27);
+    color: white;
+    font-size : 16pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: .3s ease-in-out;
+	transition: all .3s ease-in-out;
+    opacity: 25%;
+    z-index: 999999999999999999999999999999999999999999;
+}
+#backtop-btn:hover
+{
+    transform: scale(1.3);
+    cursor: none;
+    opacity: 100%;
+    background-color: #444;
+}
+.info
+{
+   position: absolute;
+   font-family: 'font2';
+   font-size: 35pt;
+   width: 100%;
+   height: 200px;
+   top: 1400px ;
+   left: 100px;
+   color : white;
+}
+#myImg 
+{
+    width : 400px;
+    height: 440px;
+    border-radius: 4pt;
+    position: absolute;
+    top: 1250px;
+    left: 1020px;
+    cursor: none;
+    -webkit-transition: .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+#myImg:hover {transform: scale(1.2);}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  cursor: none;
+  background: none;
+  -webkit-transition: .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 50%;
+}
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover
+{
+    transform: scale(1.5);
+    opacity: 100%;
+}
+
+a
+{
+  cursor: none;
+}
+.social-icon
+{
+   position: relative;
+}
+.social-tag1
+{
+  font-family: 'font2';
+  color: white;
+  font-size: 12pt;
+  position: absolute;
+  top: 130px;
+   left: 120px;
+  width: 100px;
+  height: 30px;
+  opacity: 0%;
+  transition: all .3s ease-in-out;
+  
+}
+.social-icon:hover + .social-tag1
+{
+   opacity: 100%;
+   text-decoration: underline;
+}
+.social-tag2
+{
+  font-family: 'font2';
+  color: white;
+  font-size: 12pt;
+  position: absolute;
+  top: 280px;
+  left: 120px;
+  width: 100px;
+  height: 30px;
+  opacity: 0%;
+  transition: all .3s ease-in-out;
+
+}
+.social-icon:hover + .social-tag2
+{
+   opacity: 100%;
+   text-decoration: underline;
+}
+.social-tag3
+{
+  font-family: 'font2';
+  color: white;
+  font-size: 12pt;
+  position: absolute;
+  top: 420px;
+  left: 120px;
+  width: 100px;
+  height: 30px;
+  opacity: 0%;
+  transition: all .3s ease-in-out;
+}
+.social-icon:hover + .social-tag3
+{
+   opacity: 100%;
+   text-decoration: underline;
+}
+.social-tag4
+{
+  font-family: 'font2';
+  color: white;
+  font-size: 12pt;
+  position: absolute;
+  top: 560px;
+   left: 120px;
+  width: 100px;
+  height: 30px;
+  opacity: 0%;
+  transition: all .3s ease-in-out;
+}
+.social-icon:hover + .social-tag4
+{
+   opacity: 100%;
+   text-decoration: underline;
+}
+button
+{
+  cursor: none;
+}
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background: none;
+  font-size: 32pt;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: none;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 625px;
+  right: 450px;
+  width: 280px;
+  transition: all .3s ease-in-out;
+}
+/* Add some hover effects to buttons */
+.open-button:hover
+{
+  
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  background-color: #111;
+  border-radius: 4pt;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 400px;
+  padding: 10px;
+}
+
+/* Full-width input fields */
+.form-container input[type=login-email], .form-container input[type=password] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border-radius: 4pt;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=login-email]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn-form {
+  background-color: white;
+  color: #111;
+  padding: 16px 20px;
+  border-radius: 4pt;
+  border: none;
+  cursor: none;
+  width: 100%;
+  margin-bottom:10px;
+  outline: none;
+  opacity: 0.8;
+  box-shadow: 0 5px #999;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: white;
+}
+.form-container .btn-form:hover {background-color: black;color: white;}
+
+.form-container .btn-form:active {
+  background-color: black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

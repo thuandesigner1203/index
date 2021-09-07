@@ -1,0 +1,24 @@
+﻿
+.console-container {
+ 
+  font-family: 'font2';
+  font-size:4em;
+  text-align:center;
+  height: 200px;
+  width: 1200px;
+  display:block;
+  position:absolute;
+  text-align: left;
+  color:white;
+  top:0;
+  bottom:350px;
+  left:180px;;
+  right:0;
+  margin:auto;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
