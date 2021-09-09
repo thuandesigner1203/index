@@ -545,8 +545,8 @@ button
   cursor: none;
   opacity: 0.5;
   position: fixed;
-  bottom: 625px;
-  right: 450px;
+  bottom: 88%;
+  right: 29%;
   width: 280px;
   transition: all .3s ease-in-out;
 }
