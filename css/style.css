@@ -346,8 +346,8 @@ input[type="text"]
     height: 440px;
     border-radius: 4pt;
     position: absolute;
-    top: 1250px;
-    left: 1020px;
+    top: 175%;
+    left: 65%;
     cursor: none;
     -webkit-transition: .3s ease-in-out;
 	transition: all .3s ease-in-out;
