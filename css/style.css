@@ -621,7 +621,8 @@ button
   font-family: 'font1';
   background-color: yellow;
   color: #111;
-  width: 20%;
+  border: 4px yellow solid;
+  width: 50%;
   height: 40px;
   transition: all .3s ease-in-out;
 }
