@@ -619,10 +619,10 @@ button
 .button-portfolio
 {
   font-family: 'font1';
-  background-color: yellow;
-  color: #111;
-  border: 4px yellow solid;
-  width: 50%;
+  background-color: #111;
+  border: none;
+  color: white;
+  width: 70%;
   height: 40px;
   transition: all .3s ease-in-out;
 }
